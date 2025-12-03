@@ -25,7 +25,7 @@ from aiogram.utils.keyboard import InlineKeyboardBuilder
 import qrcode
 
 # ================= КОНФИГУРАЦИЯ =================
-BOT_TOKEN = "USER_BOT_TOKEN_HERE" # Токен БОТА покупателя
+BOT_TOKEN = os.getenv("BOT_TOKEN") # Токен БОТА покупателя
 
 DEFAULT_PHOTO = "https://cdn-icons-png.flaticon.com/512/2203/2203183.png"
 DB_FILE = "kokshe_prices.db" 
@@ -1001,4 +1001,5 @@ if __name__ == "__main__":
     try:
         asyncio.run(main())
     except KeyboardInterrupt:
+
         print("Bot stopped")
